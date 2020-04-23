@@ -1,0 +1,45 @@
+$white: hsl(0, 0%, 100%);
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: hsl(218, 28%, 13%);
+  color: $white;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+
+  .nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo-img {
+      width: 10rem;
+      height: auto;
+    }
+  }
+
+  .nav-links {
+  }
+}
