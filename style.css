@@ -492,9 +492,8 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #181f2b;
+  background-color: #171f2a;
   padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .access-wrapper .access {
@@ -506,6 +505,7 @@ a {
   margin: 0 2.4rem;
   background-color: #21293c;
   border-radius: 0.4rem;
+  margin-bottom: -10rem;
 }
 
 .access-wrapper .access-title {
@@ -590,18 +590,19 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 6rem 0;
-  background-color: #181f2b;
+  background-color: #0c1524;
+  padding-top: 16rem;
 }
 
 .footer-wrapper .footer {
   max-width: 104.4rem;
   width: 100%;
   height: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
   margin: 0 2.4rem;
+}
+
+.footer-wrapper .footer-logo {
+  width: 15rem;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
