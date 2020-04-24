@@ -77,14 +77,16 @@ a {
 
 .header-wrapper {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
+  align-items: center;
   justify-content: center;
   position: relative;
 
   .background-img {
     width: 100%;
-    height: 30rem;
+    height: 50rem;
     background-image: url("/images/bg-curvy-desktop.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -92,6 +94,10 @@ a {
     position: absolute;
     bottom: 0;
     z-index: -1;
+
+    @media (max-width: 450px) {
+      background-image: url("/images/bg-curvy-mobile.svg");
+    }
   }
 
   .header {
@@ -108,6 +114,10 @@ a {
       width: 100%;
       height: auto;
       margin-top: 3rem;
+
+      @media (max-width: 450px) {
+        max-width: 80%;
+      }
     }
 
     &-title {
@@ -117,6 +127,10 @@ a {
       font-size: 2.8rem;
       text-align: center;
       margin-top: 3rem;
+
+      @media (max-width: 450px) {
+        font-size: 2.4rem;
+      }
     }
 
     &-subtitle {
@@ -125,6 +139,10 @@ a {
       height: auto;
       text-align: center;
       margin-top: 3rem;
+
+      @media (max-width: 450px) {
+        font-size: 1.4rem;
+      }
     }
     &-btn {
       background-color: hsl(176, 68%, 64%);
@@ -154,6 +172,7 @@ a {
   display: flex;
   justify-content: center;
   background-color: rgb(24, 31, 43);
+  padding-top: 6rem;
 
   .services {
     max-width: 104.4rem;
@@ -165,6 +184,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 14rem;
+    grid-row-gap: 6rem;
     margin: 0 2.4rem;
 
     .service-box {
@@ -175,6 +195,11 @@ a {
       &--img {
         width: 8rem;
         height: 7rem;
+
+        @media (max-width: 450px) {
+          width: auto;
+          height: auto;
+        }
       }
 
       &--title {
@@ -190,7 +215,7 @@ a {
 
       &:not(:first-child) {
         @media (max-width: 450px) {
-          margin-top: 4rem;
+          padding-top: 6rem;
         }
       }
     }
@@ -206,6 +231,10 @@ a {
     @media (max-width: 450px) {
       grid-template-columns: repeat(1, 1fr);
     }
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 0;
   }
 }
 
@@ -235,6 +264,10 @@ a {
         max-width: 50rem;
         width: 100%;
         height: auto;
+
+        @media (max-width: 450px) {
+          max-width: 80%;
+        }
       }
     }
 
@@ -250,6 +283,9 @@ a {
         @media (max-width: 768px) {
           width: 100%;
         }
+        @media (max-width: 450px) {
+          font-size: 2rem;
+        }
       }
       &--description {
         font-size: 1.4rem;
@@ -258,6 +294,9 @@ a {
 
         @media (max-width: 768px) {
           width: 100%;
+        }
+        @media (max-width: 450px) {
+          font-size: 2rem;
         }
       }
 
@@ -353,7 +392,8 @@ a {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 450px) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 90%);
+      justify-content: center;
     }
   }
 }
@@ -396,7 +436,7 @@ a {
         height: 3.6rem;
         border-radius: 4rem;
         border: none;
-        padding: 1rem;
+        padding: 1rem 2rem;
         margin-right: 2rem;
         outline: none;
 
@@ -424,18 +464,26 @@ a {
         &:hover {
           background-color: hsl(188, 50%, 40%);
         }
+
+        @media (max-width: 450px) {
+          max-width: 100%;
+        }
       }
 
       @media (max-width: 768px) {
         flex-direction: column;
       }
     }
+
+    @media (max-width: 450px) {
+      margin-bottom: -15rem;
+    }
   }
 }
 
 .footer-wrapper {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   padding: 6rem 0;
@@ -452,5 +500,49 @@ a {
       width: 15rem;
       height: auto;
     }
+
+    &-boxs {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 6rem;
+      margin-top: 4rem;
+
+      .footer-menu {
+        padding-left: 3rem;
+
+        @media (max-width: 450px) {
+          padding-left: 0;
+        }
+      }
+
+      &--box {
+        list-style: none;
+
+        li {
+          margin-top: 2rem;
+          display: flex;
+          align-items: center;
+
+          img {
+            align-self: flex-start;
+            margin-right: 2rem;
+            margin-top: 0.4rem;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+      }
+
+      @media (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    padding-top: 24rem;
   }
 }
